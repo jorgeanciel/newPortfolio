@@ -53,9 +53,9 @@ const Banner = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className="mb-8 max-w-lg mx-auto lg:mx-0"
+              className="mb-8 max-w-lg mx-auto lg:mx-0 text-xl"
             >
-              Paciencia || Perseverancia || Responsabilidad || Estudio
+              Perseverancia || Paciencia || Responsabilidad || Estudio
               <br />
               Son mis mayores virtudes
             </motion.p>
@@ -69,7 +69,11 @@ const Banner = () => {
               <Link to="contact">
                 <button className="btn btn-lg">Contact me</button>
               </Link>
-              <a href="#" className="text-gradient btn-link">
+              <a
+                href="https://drive.google.com/file/d/1pOmO0hWTDK1amrGnYcbIJ93Pb9TOTq4D/view"
+                className="text-gradient btn-link"
+                target="__blank"
+              >
                 My Cv
               </a>
             </motion.div>
