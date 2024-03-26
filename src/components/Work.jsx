@@ -4,6 +4,7 @@ import { fadeIn } from "../variants";
 import Img1 from "../assets/pokedex.png";
 import Img2 from "../assets/ecomerce.png";
 import Img3 from "../assets/rick and morty.png";
+import Img4 from "../assets/GcDesk.png";
 
 const Work = () => {
   return (
@@ -37,7 +38,7 @@ const Work = () => {
 
               <img
                 className="group-hover:scale-125 transition-all duration-500"
-                src={Img1}
+                src={Img4}
                 alt=""
               />
 
@@ -47,11 +48,11 @@ const Work = () => {
 
               <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-800 z-50">
                 <a
-                  href="https://ikaro-pokedex.netlify.app/pokedex"
+                  href="https://ticket-demo10.netlify.app/"
                   className="text-3xl text-white"
                   target="__blank"
                 >
-                  Pokedex
+                  Sistema de Ticket
                 </a>
               </div>
             </div>
@@ -61,7 +62,7 @@ const Work = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 flex flex-col gap-y-8"
+            className="flex-1 flex flex-col gap-y-8  lg:max-h-[800px]"
           >
             <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
               <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duartion-300"></div>
@@ -81,6 +82,27 @@ const Work = () => {
                   target="__blank"
                 >
                   Ecomerce
+                </a>
+              </div>
+            </div>
+            <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
+              <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duartion-300"></div>
+              <img
+                className="group-hover:scale-125 transition-all duration-500"
+                src={Img1}
+                alt=""
+              />
+              <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
+                <span className="text-gradient">UI/UX Desing</span>
+              </div>
+
+              <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-800 z-50">
+                <a
+                  href="https://ikaro-pokedex.netlify.app/pokedex"
+                  className="text-3xl text-white"
+                  target="__blank"
+                >
+                  Pokedex
                 </a>
               </div>
             </div>

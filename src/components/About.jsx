@@ -3,6 +3,10 @@ import Logo1 from "../assets/JavaScript-logo.png";
 import Logo2 from "../assets/React-icon.svg.png";
 import Logo3 from "../assets/nodeJS.png";
 import Logo4 from "../assets/taildwind.png";
+import Logo5 from "../assets/material.png";
+import Logo6 from "../assets/postgres.png";
+import Logo7 from "../assets/mysql.png";
+import Logo8 from "../assets/sequelize.png";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 
@@ -49,9 +53,9 @@ const About = () => {
                 </div>
               </div>
               <div>
-                <div className="text-[30px]">NodeJs</div>
-                <div className="flex justify-center">
-                  <img className="w-[55px] pt-1" src={Logo3} alt="" />
+                <h1 className="text-[30px]">Material UI</h1>
+                <div className="flex justify-center m-2">
+                  <img className="w-[60px]" src={Logo5} alt="" />
                 </div>
               </div>
               <div>
@@ -60,7 +64,33 @@ const About = () => {
                   <img className="w-[70px]" src={Logo4} alt="" />
                 </div>
               </div>
+              <div>
+                <div className="text-[30px]">NodeJs</div>
+                <div className="flex justify-center">
+                  <img className="w-[55px] pt-1" src={Logo3} alt="" />
+                </div>
+              </div>
+              <div>
+                <h1 className="text-[30px]">Sequelize</h1>
+                <div className="flex justify-center">
+                  <img className="w-[60px]" src={Logo8} alt="" />
+                </div>
+              </div>
+
+              <div>
+                <h1 className="text-[30px]">Postgres</h1>
+                <div>
+                  <img className="w-[100px]" src={Logo6} alt="" />
+                </div>
+              </div>
+              <div>
+                <h1 className="text-[30px]">MySQL</h1>
+                <div>
+                  <img className="w-[80px]" src={Logo7} alt="" />
+                </div>
+              </div>
             </div>
+
             <div className="flex gap-x-8 items-center mx-auto">
               <button className="btn p-3">Contact me</button>
               <a
