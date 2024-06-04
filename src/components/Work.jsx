@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { fadeIn } from "../variants";
-import Img1 from "../assets/pokedex.png";
-import Img2 from "../assets/ecomerce.png";
+import Img1 from "../assets/pokedex-react.png";
+import Img2 from "../assets/ecomerce-react.png";
 import Img3 from "../assets/rick and morty.png";
 import Img4 from "../assets/GcDesk.png";
 
@@ -27,10 +27,11 @@ const Work = () => {
               <p className="max-w-sm mb-16">
                 {" "}
                 Proyectos Personales realizados con React, el diseño hecho con
-                taildwind, Boostrap y Css.
-                <br /> Consumo de API desde JS con Axios y Fetch.
+                taildwind, Boostrap y MaterialUI.
+                <br /> Consumo de API con Axios y Fetch.
                 <br />
-                Creacion de mi propia API con NodeJs y Postgres en el E-comerce
+                Creacion de mi propia API con NodeJs y Postgres en el Sistema de
+                Ticket
               </p>
             </div>
             <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
@@ -77,7 +78,7 @@ const Work = () => {
 
               <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-800 z-50">
                 <a
-                  href="https://ikaro-ecomerces.netlify.app/"
+                  href="https://ecomerce-ikaro.netlify.app/"
                   className="text-3xl text-white"
                   target="__blank"
                 >
@@ -98,7 +99,7 @@ const Work = () => {
 
               <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-800 z-50">
                 <a
-                  href="https://ikaro-pokedex.netlify.app/pokedex"
+                  href="https://pokedex-ikaro.netlify.app/"
                   className="text-3xl text-white"
                   target="__blank"
                 >
