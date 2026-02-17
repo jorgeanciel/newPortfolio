@@ -1,5 +1,6 @@
 import React from "react";
 import Ikaro from "../assets/ikaro.png";
+import { Link } from "react-scroll";
 
 const Header = () => {
   return (
@@ -9,7 +10,9 @@ const Header = () => {
           <a href="#">
             <img className="w-24" src={Ikaro} alt="" />
           </a>
-          <button className="btn btn-sm">Work with me</button>
+          <Link to="contact">
+            <button className="btn btn-sm">Work with me</button>
+          </Link>
         </div>
       </div>
     </header>

@@ -1,8 +1,52 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { fadeIn } from "../variants";
+import { useState } from "react";
 
 const Contact = () => {
+  const [form, setForm] = useState({
+    name: "",
+    message: "",
+    email: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleOnSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          message: form.message,
+          email: form.email,
+          title: `Mensaje enviado de ${form.name}`,
+        }),
+      });
+      if (response.ok) {
+        alert("Mensaje enviado correctamente 🚀");
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        alert("Error enviando mensaje");
+      }
+    } catch (error) {
+      alert("Error de conexion");
+    }
+    setLoading(false);
+  };
+
   return (
     <section className="py-16 lg:section" id="contact">
       <div className="container mx-auto">
@@ -28,6 +72,7 @@ const Contact = () => {
 
           {/**form*/}
           <motion.form
+            onSubmit={handleOnSubmit}
             variants={fadeIn("left", 0.3)}
             initial="hidden"
             whileInView={"show"}
@@ -38,19 +83,30 @@ const Contact = () => {
               type="text"
               className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all"
               placeholder="Your name"
+              name="name"
+              value={form.name}
+              onChange={handleChange}
             />
             <input
               type="text"
               className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all"
               placeholder="Your email"
+              name="email"
+              value={form.email}
+              onChange={handleChange}
             />
             <textarea
               type="text"
               className="bg-transparent border-b py-3 outline-none
                w-full placeholder:text-white focus:border-accent transition-all mb-12 resize-none"
               placeholder="Your message"
+              name="message"
+              value={form.value}
+              onChange={handleChange}
             ></textarea>
-            <button className="btn btn-lg">Send message</button>
+            <button className="btn btn-lg" type="submit" disabled={loading}>
+              {loading ? "Sending..." : "Send Message"}
+            </button>
           </motion.form>
         </div>
       </div>
