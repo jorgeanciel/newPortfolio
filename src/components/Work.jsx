@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import React from "react";
 import { fadeIn } from "../variants";
 import Img1 from "../assets/pokedex-react.png";
 import Img2 from "../assets/ecomerce-react.png";

@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import React from "react";
 import { fadeIn } from "../variants";
 import { useState } from "react";
 

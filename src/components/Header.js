@@ -1,4 +1,3 @@
-import React from "react";
 import Ikaro from "../assets/ikaro.png";
 import { Link } from "react-scroll";
 
@@ -7,9 +6,9 @@ const Header = () => {
     <header className=" py-8">
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
-          <a href="#">
+          <div href="#">
             <img className="w-24" src={Ikaro} alt="" />
-          </a>
+          </div>
           <Link to="contact">
             <button className="btn btn-sm">Work with me</button>
           </Link>
